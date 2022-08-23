@@ -1,33 +1,24 @@
-# Ignore os arquivos de sistema do Mac
-.DS_store
-
-# Ignore a pasta node_modules
-node_modules
-
-# Ignore todos os arquivos de texto
-*.txt
-
-# Ignore arquivos relacionados às chaves de API
-.env
-
-# Ignore arquivos de configuração de SASS
-.sass-cache# Ignore os arquivos de sistema do Mac
-.DS_store
-
-# Ignore a pasta node_modules
-node_modules
-
-# Ignore todos os arquivos de texto
-*.txt
-
-# Ignore arquivos relacionados às chaves de API
-.env
-
-# Ignore arquivos de configuração de SASS
-.sass-cache
-
+# Compiled class file
 *.class
 
-*.bin
+# Log file
+*.log
 
-*.lock
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+replay_pid*
