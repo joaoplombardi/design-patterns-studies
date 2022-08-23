@@ -26,8 +26,8 @@ node_modules
 # Ignore arquivos de configuração de SASS
 .sass-cache
 
-.class
+*.class
 
-.bin
+*.bin
 
-.lock
+*.lock
