@@ -7,13 +7,13 @@ import java.math.BigDecimal;
 public class DiscountCalculator {
 
     public BigDecimal calculate(Budget budget){
-        Discount discount = new DiscountForBudgetWithMoreThanFiveItems(
-                new DiscountForBudgetWithMoreThanFiveItems(
+        Discount chainOfDiscount = new DiscountForBudgetWithMoreThanFiveItems(
+                new DiscountForBudgetWithAValueGreaterThanFiveHundred(
                         new WithoutDiscount()
                 )
         );
 
-        return discount.calculate(budget);
+        return chainOfDiscount.performCalculation(budget);
     }
 
 }
