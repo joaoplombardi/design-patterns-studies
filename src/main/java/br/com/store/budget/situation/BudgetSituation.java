@@ -1,7 +1,7 @@
 package br.com.store.budget.situation;
 
 import br.com.store.budget.Budget;
-import br.com.store.budget.exceptions.DomainException;
+import br.com.store.exceptions.DomainException;
 
 import java.math.BigDecimal;
 

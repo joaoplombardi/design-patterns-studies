@@ -1,4 +1,4 @@
-package br.com.store.budget.exceptions;
+package br.com.store.exceptions;
 
 public class DomainException extends RuntimeException {
 

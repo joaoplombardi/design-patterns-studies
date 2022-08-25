@@ -1,13 +1,18 @@
 package br.com.store.request;
 
 import br.com.store.budget.Budget;
+import br.com.store.request.actions.ActionAfterOrder;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 public class GenerateOrderHandler {
 
-    //construtor com as injeções de dependências
+    private List<ActionAfterOrder> actions;
 
+    public GenerateOrderHandler(List<ActionAfterOrder> actions) {
+        this.actions = actions;
+    }
 
     public void execute(GenerateOrder data){
         Request request = new Request(
@@ -19,9 +24,7 @@ public class GenerateOrderHandler {
                 )
         );
 
-        System.out.println("Salvar pedido no banco");
-
-        System.out.println("Enviar e-mail com dados do novo pedido");
+        actions.forEach(action -> action.execute(request));
     }
 
 }
