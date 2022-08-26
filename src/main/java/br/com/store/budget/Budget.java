@@ -1,6 +1,7 @@
 package br.com.store.budget;
 
 import br.com.store.budget.situation.BudgetSituation;
+import br.com.store.budget.situation.Finished;
 import br.com.store.budget.situation.UnderAnalysis;
 
 import java.math.BigDecimal;
@@ -48,5 +49,9 @@ public class Budget {
 
     public void finish(){
         this.situation.finish(this);
+    }
+
+    public boolean isFinished() {
+        return situation instanceof Finished;
     }
 }
