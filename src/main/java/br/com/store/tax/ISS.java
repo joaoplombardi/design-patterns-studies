@@ -4,10 +4,14 @@ import br.com.store.budget.Budget;
 
 import java.math.BigDecimal;
 
-public class ISS implements Tax {
+public class ISS extends Tax {
+
+    public ISS(Tax other) {
+        super(other);
+    }
 
     @Override
-    public BigDecimal calculate(Budget budget){
+    public BigDecimal performCalculation(Budget budget){
         return budget.getValue().multiply(new BigDecimal("0.06"));
     }
 
